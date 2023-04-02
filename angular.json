@@ -1,0 +1,43 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "gdenis-footer": {
+      "projectType": "library",
+      "root": "projects/gdenis-footer",
+      "sourceRoot": "projects/gdenis-footer/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/gdenis-footer/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/gdenis-footer/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/gdenis-footer/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/gdenis-footer/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": false
+  }
+}
