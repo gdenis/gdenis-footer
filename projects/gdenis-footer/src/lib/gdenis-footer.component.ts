@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'lib-gdenis-footer',
   template: `
     <p>
-      gdenis-footer works!
+      My super footer!: Gabriel Denis Llanes.
     </p>
   `,
   styles: [
